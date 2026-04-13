@@ -1,0 +1,132 @@
+.bid-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 16px;
+}
+
+.bid-modal {
+  background: linear-gradient(135deg, #2c2c2c, #3a3a3a);
+  border: 2px solid var(--color-copper);
+  border-radius: 12px;
+  padding: 24px;
+  width: 100%;
+  max-width: 340px;
+}
+
+.bid-modal-accent {
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-copper), var(--color-gold), var(--color-copper));
+  margin: -24px -24px 20px -24px;
+  border-radius: 10px 10px 0 0;
+}
+
+.bid-modal h3 {
+  color: var(--color-gold);
+  font-family: var(--font-heading);
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.bid-modal-mat {
+  color: var(--color-copper);
+  font-size: 13px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.bid-modal-mat .mat-icon {
+  width: 14px;
+  height: 14px;
+  color: var(--color-copper);
+}
+
+.bid-modal-current {
+  color: var(--color-text-secondary);
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+.bid-modal-current span {
+  color: var(--color-gold);
+  font-weight: bold;
+}
+
+.bid-input-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.bid-input-prefix {
+  color: var(--color-gold);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.bid-input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: var(--color-bg-card);
+  color: var(--color-text-primary);
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.bid-input:focus {
+  border-color: var(--color-gold);
+}
+
+.bid-modal-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.bid-modal-buttons button {
+  flex: 1;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.2s;
+}
+
+.bid-cancel-btn {
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  background: var(--color-bg-card);
+}
+
+.bid-confirm-btn {
+  border: 1px solid var(--color-gold);
+  color: var(--color-gold);
+  background: rgba(218, 165, 32, 0.15);
+}
+
+.bid-confirm-btn:hover:not(:disabled) {
+  background: rgba(218, 165, 32, 0.25);
+}
+
+.bid-confirm-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.bid-error {
+  color: #e74c3c;
+  font-size: 12px;
+  margin-top: -12px;
+  margin-bottom: 12px;
+}

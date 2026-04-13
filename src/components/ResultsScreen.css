@@ -1,0 +1,94 @@
+.results-screen {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.results-header {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.results-header h1 {
+  font-family: var(--font-heading);
+  color: var(--color-gold);
+  font-size: 24px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.results-accent-bar {
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-copper), var(--color-gold), var(--color-copper));
+  margin-bottom: 24px;
+  border-radius: 2px;
+}
+
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 28px;
+}
+
+.results-table th {
+  color: var(--color-copper);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 8px 6px;
+  text-align: left;
+  border-bottom: 2px solid var(--color-copper);
+}
+
+.results-table td {
+  padding: 10px 6px;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 14px;
+}
+
+.results-faction {
+  color: var(--color-gold);
+  font-weight: bold;
+  font-family: var(--font-heading);
+}
+
+.results-mat {
+  color: var(--color-copper);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.results-mat .mat-icon {
+  width: 14px;
+  height: 14px;
+  color: var(--color-copper);
+}
+
+.results-winner {
+  color: var(--color-text-primary);
+}
+
+.results-deduction {
+  color: var(--color-gold);
+  font-weight: bold;
+  font-family: var(--font-heading);
+}
+
+.restart-btn {
+  width: 100%;
+  padding: 14px;
+  border: 2px solid var(--color-copper);
+  border-radius: 8px;
+  background: rgba(184, 115, 51, 0.15);
+  color: var(--color-copper);
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.2s;
+}
+
+.restart-btn:hover {
+  background: rgba(184, 115, 51, 0.25);
+}
