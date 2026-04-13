@@ -42,9 +42,8 @@
 }
 
 .bid-modal-mat .mat-icon {
-  width: 14px;
-  height: 14px;
-  color: var(--color-copper);
+  font-size: 13px;
+  line-height: 1;
 }
 
 .bid-modal-current {
