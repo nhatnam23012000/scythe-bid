@@ -1,1 +1,57 @@
-/* Global styles */
+:root {
+  --color-bg-primary: #2c2c2c;
+  --color-bg-secondary: #3a3a3a;
+  --color-bg-card: rgba(60, 60, 60, 0.5);
+  --color-bg-card-active: linear-gradient(180deg, rgba(184, 115, 51, 0.2), rgba(184, 115, 51, 0.05));
+  --color-gold: #daa520;
+  --color-gold-glow: rgba(218, 165, 32, 0.3);
+  --color-copper: #b87333;
+  --color-text-primary: #e8d5a3;
+  --color-text-secondary: #aaa;
+  --color-text-muted: #666;
+  --color-border: #555;
+  --color-border-active: #b87333;
+  --font-heading: Georgia, 'Times New Roman', serif;
+  --font-body: Georgia, 'Times New Roman', serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  background: linear-gradient(135deg, var(--color-bg-primary) 0%, var(--color-bg-secondary) 50%, var(--color-bg-primary) 100%);
+  color: var(--color-text-primary);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+input {
+  font-family: var(--font-body);
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+input::placeholder {
+  color: var(--color-text-muted);
+}
