@@ -24,14 +24,17 @@
 
 .combo-card .faction-emblem {
   position: absolute;
-  left: -2px;
+  left: 2px;
   top: 50%;
   transform: translateY(-50%);
-  width: 60px;
-  height: 60px;
-  opacity: 0.12;
-  color: var(--color-gold);
+  width: 54px;
+  height: 54px;
+  opacity: 0.25;
   pointer-events: none;
+  object-fit: contain;
+  border-radius: 50%;
+  filter: grayscale(30%) brightness(1.2);
+  mix-blend-mode: luminosity;
 }
 
 .combo-info {
