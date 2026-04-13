@@ -1,15 +1,15 @@
 // Faction emblems using original Scythe game art as blended watermarks.
 
 const EMBLEM_PATHS = {
-  polania: '/factions/polania.png',
-  saxony: '/factions/saxony.png',
-  crimea: '/factions/crimea.png',
-  nordic: '/factions/nordic.png',
-  rusviet: '/factions/rusviet.png',
-  albion: '/factions/albion.png',
-  togawa: '/factions/togawa.png',
-  fenris: '/factions/fenris.png',
-  vesna: '/factions/vesna.png',
+  polania: '/factions/polania.webp',
+  saxony: '/factions/saxony.webp',
+  crimea: '/factions/crimea.webp',
+  nordic: '/factions/nordic.webp',
+  rusviet: '/factions/rusviet.webp',
+  albion: '/factions/albion.webp',
+  togawa: '/factions/togawa.webp',
+  fenris: '/factions/fenris.webp',
+  vesna: '/factions/vesna.webp',
 };
 
 export function FactionEmblem({ factionId, className }) {
