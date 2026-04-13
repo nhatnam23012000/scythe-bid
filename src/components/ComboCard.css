@@ -1,0 +1,104 @@
+.combo-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  padding: 12px 12px 12px 62px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 58px;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-card);
+}
+
+.combo-card.has-bid {
+  background: linear-gradient(180deg, rgba(184, 115, 51, 0.2), rgba(184, 115, 51, 0.05));
+  border-color: var(--color-border-active);
+}
+
+.combo-card:active {
+  transform: scale(0.98);
+}
+
+.combo-card .faction-emblem {
+  position: absolute;
+  left: -2px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  opacity: 0.12;
+  color: var(--color-gold);
+  pointer-events: none;
+}
+
+.combo-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.combo-faction-name {
+  color: var(--color-gold);
+  font-size: 15px;
+  font-weight: bold;
+  font-family: var(--font-heading);
+}
+
+.combo-mat-name {
+  color: var(--color-copper);
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.combo-mat-name .mat-icon {
+  width: 14px;
+  height: 14px;
+  color: var(--color-copper);
+}
+
+.combo-tier {
+  text-align: center;
+  padding: 0 10px;
+  border-left: 1px solid var(--color-border);
+  border-right: 1px solid var(--color-border);
+  min-width: 52px;
+}
+
+.combo-tier-label {
+  color: var(--color-text-muted);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.combo-tier-value {
+  color: var(--color-copper);
+  font-size: 14px;
+  font-family: var(--font-heading);
+}
+
+.combo-bid {
+  text-align: right;
+  min-width: 72px;
+}
+
+.combo-bid-amount {
+  color: var(--color-gold);
+  font-size: 15px;
+  font-family: var(--font-heading);
+  font-weight: bold;
+}
+
+.combo-bid-holder {
+  color: var(--color-text-secondary);
+  font-size: 11px;
+}
+
+.combo-no-bid {
+  color: var(--color-text-muted);
+  font-size: 12px;
+}
