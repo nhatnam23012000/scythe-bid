@@ -33,8 +33,7 @@
   pointer-events: none;
   object-fit: contain;
   border-radius: 50%;
-  filter: grayscale(30%) brightness(1.2);
-  mix-blend-mode: luminosity;
+  filter: brightness(1.1);
 }
 
 .combo-info {
