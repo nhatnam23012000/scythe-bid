@@ -52,6 +52,12 @@
   font-family: var(--font-heading);
 }
 
+.results-base-faction {
+  color: var(--color-text-secondary);
+  font-size: 11px;
+  font-weight: normal;
+}
+
 .results-mat {
   color: var(--color-copper);
   display: flex;

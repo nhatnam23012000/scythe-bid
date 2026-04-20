@@ -33,7 +33,14 @@ export default function BidModal({ combo, onConfirm, onCancel }) {
     <div className="bid-modal-overlay" onClick={onCancel}>
       <div className="bid-modal" onClick={e => e.stopPropagation()}>
         <div className="bid-modal-accent" />
-        <h3>{faction?.name}</h3>
+        <h3>
+          {faction?.name}
+          {combo.baseFaction && (
+            <span className="bid-modal-base-faction">
+              {' '}({FACTIONS.find(f => f.id === combo.baseFaction)?.name} base)
+            </span>
+          )}
+        </h3>
         <div className="bid-modal-mat">
           <MatIcon matId={combo.mat} className="mat-icon" />
           {mat?.name}

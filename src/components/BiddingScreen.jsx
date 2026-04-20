@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { TIER_VALUES } from '../data/tierValues.js';
 import TurnIndicator from './TurnIndicator.jsx';
 import ComboCard from './ComboCard.jsx';
 import BidModal from './BidModal.jsx';
@@ -7,6 +8,12 @@ import './BiddingScreen.css';
 export default function BiddingScreen({ state, dispatch }) {
   const [selectedComboIndex, setSelectedComboIndex] = useState(null);
   const currentPlayer = state.players[state.currentPlayerIndex];
+
+  const minTierValue = Math.min(
+    ...state.combos
+      .map(c => TIER_VALUES[c.mat]?.[c.faction])
+      .filter(v => v !== undefined)
+  );
 
   function handleComboTap(index) {
     setSelectedComboIndex(index);
@@ -39,6 +46,7 @@ export default function BiddingScreen({ state, dispatch }) {
             key={index}
             combo={combo}
             players={state.players}
+            minTierValue={minTierValue}
             onTap={() => handleComboTap(index)}
           />
         ))}

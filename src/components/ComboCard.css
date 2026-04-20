@@ -48,6 +48,12 @@
   font-family: var(--font-heading);
 }
 
+.combo-base-faction {
+  color: var(--color-text-secondary);
+  font-size: 11px;
+  font-weight: normal;
+}
+
 .combo-mat-name {
   color: var(--color-copper);
   font-size: 12px;

@@ -32,6 +32,12 @@
   margin-bottom: 4px;
 }
 
+.bid-modal-base-faction {
+  color: var(--color-text-secondary);
+  font-size: 13px;
+  font-weight: normal;
+}
+
 .bid-modal-mat {
   color: var(--color-copper);
   font-size: 13px;

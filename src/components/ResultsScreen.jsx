@@ -31,7 +31,14 @@ export default function ResultsScreen({ state, dispatch }) {
 
             return (
               <tr key={i}>
-                <td className="results-faction">{faction?.name}</td>
+                <td className="results-faction">
+                  {faction?.name}
+                  {combo.baseFaction && (
+                    <span className="results-base-faction">
+                      {' '}({FACTIONS.find(f => f.id === combo.baseFaction)?.name} base)
+                    </span>
+                  )}
+                </td>
                 <td>
                   <div className="results-mat">
                     <MatIcon matId={combo.mat} className="mat-icon" />

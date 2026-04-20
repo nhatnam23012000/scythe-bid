@@ -5,10 +5,11 @@ import { FACTIONS } from '../data/factions.js';
 import { PLAYER_MATS } from '../data/playerMats.js';
 import './ComboCard.css';
 
-export default function ComboCard({ combo, players, onTap }) {
+export default function ComboCard({ combo, players, minTierValue, onTap }) {
   const faction = FACTIONS.find(f => f.id === combo.faction);
   const mat = PLAYER_MATS.find(m => m.id === combo.mat);
-  const tierValue = TIER_VALUES[combo.mat]?.[combo.faction];
+  const rawTierValue = TIER_VALUES[combo.mat]?.[combo.faction];
+  const tierValue = rawTierValue !== undefined ? rawTierValue - minTierValue : undefined;
   const holder = combo.holderId !== null
     ? players.find(p => p.id === combo.holderId)
     : null;
@@ -24,7 +25,14 @@ export default function ComboCard({ combo, players, onTap }) {
       <FactionEmblem factionId={combo.faction} className="faction-emblem" />
 
       <div className="combo-info">
-        <div className="combo-faction-name">{faction?.name}</div>
+        <div className="combo-faction-name">
+          {faction?.name}
+          {combo.baseFaction && (
+            <span className="combo-base-faction">
+              {' '}({FACTIONS.find(f => f.id === combo.baseFaction)?.name} base)
+            </span>
+          )}
+        </div>
         <div className="combo-mat-name">
           <MatIcon matId={combo.mat} className="mat-icon" />
           {mat?.name}

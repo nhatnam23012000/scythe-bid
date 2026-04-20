@@ -40,5 +40,18 @@ export function randomizeCombos(playerCount, expansions) {
     }));
   } while (hasBannedCombo(combos));
 
+  // Fenris and Vesna use another faction's home base
+  const selectedIds = selectedFactions.map(f => f.id);
+  const availableBases = shuffle(
+    FACTIONS.filter(f => f.source !== 'riseOfFenris' && !selectedIds.includes(f.id))
+  );
+  let baseIdx = 0;
+  combos = combos.map(combo => {
+    if (combo.faction === 'fenris' || combo.faction === 'vesna') {
+      return { ...combo, baseFaction: availableBases[baseIdx++].id };
+    }
+    return combo;
+  });
+
   return combos;
 }
